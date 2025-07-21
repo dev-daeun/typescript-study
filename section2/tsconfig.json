@@ -26,6 +26,8 @@
       /* Enable all strict type-checking options. */
       "strict": true,        
       
+      // null 타입이 아닌 변수에 null 저장을 불허하는가 
+      "strictNullChecks": false,
       /* Completeness */
        /* Skip type checking all .d.ts files. */
       "skipLibCheck": true                                
