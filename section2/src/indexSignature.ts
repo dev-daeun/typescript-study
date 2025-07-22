@@ -1,3 +1,5 @@
+/* 인덱스 시그니처 : 객체 내 모든 속성 key/value 가 일관된 타입을 가질 때 활용 */
+
 type CountryCodes = {
     // key 타입: string
     // value 타입: string
