@@ -36,3 +36,34 @@ let c5: Cat & Person = {
     lang: "en",
     breed: "tiger"
 }
+
+
+// 일반 사용자만 갖는 속성의 타입
+enum Grade {
+    BASIC = "basic",
+    STANDARD = "standard",
+    PREMIUM = "premium"
+}
+
+// 백오피스 스태프만 갖는 속성의 타입
+enum Permission {
+    STAFF = "staff",
+    ADMIN = "admin"
+}
+
+type User = {
+    id: number,
+    name: string,
+    grade: string,
+};
+
+function logBackOfficeUser({id, name, grade}: User & {grade: Permission}) {
+    console.log(id, name, grade);
+}
+let staff = {
+    id: 1,
+    name: "KDE",
+    grade: Permission.STAFF,
+};
+
+logBackOfficeUser(staff);
